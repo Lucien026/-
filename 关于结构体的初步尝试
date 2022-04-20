@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+
+//int main()
+//{
+//	int a = 10;
+//	int* p = &a;//int*是变量名—指针变量
+//	printf("%p\n", &a);
+//	printf("%p\n", p);
+//	*p = 20;//"*"解引用操作符/间接引用操作符
+//	printf("%d\n", a);
+//	printf("%d\n", sizeof(p));
+//	return 0;
+//}
+#include <string.h>
+struct book
+{
+	char name[20];//文学理论新编
+	float price;//51.34
+};
+int main()
+{
+	struct book b1 = { "文学理论", 51.34 };
+	strcpy_s(b1.name, "文学理论新编");
+	printf("书名:%s\n", b1.name);
+	printf("价格:%f\n", b1.price);
+	return 0;
+}
